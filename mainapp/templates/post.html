@@ -1,0 +1,40 @@
+{% extends 'index.html'%}
+{% load static %}
+
+
+{%block content%}
+
+<div id="protien" class="protien_main" style="display: flex;">
+ 
+    <div class="container">  
+       <div class="row">
+
+
+       <div class="row"> 
+          
+ {% for postss in post%}
+     
+         
+          <div class="col-md-3 col-sm-6">
+
+             <div class="protien"
+                style="border: solid 2px;  border-radius: 40px; padding: 2px 2px 5px 2px ; width: 250px; height: 390px; ">
+
+                <figure><img src="{{postss.image.url}}"
+                      style="border-radius: 40px 40px 0px 0px; height: 200px; width: 200px;" alt="#" /></figure>
+                <h3>$400</h3>
+                <span> {{postss.title}} </span>
+                <a class="read_more mar_top" href=""> Buy Now</a>
+
+             </div>
+
+          </div> {% endfor %}
+</a>
+          
+       </div>
+    </div>
+   
+ </div>
+
+ </div>
+{% endblock %}
